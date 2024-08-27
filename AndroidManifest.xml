@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/launcher_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/launcher_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:enableOnBackInvokedCallback="true"
+        tools:targetApi="33">
+        <activity
+            android:name=".WebViewActivity"
+            android:exported="false"
+            android:label="@string/site"/>
+        <activity
+            android:name=".AppInfoActivity"
+            android:exported="false"
+            android:label="@string/more_app_info"
+            android:parentActivityName=".AllBooksActivity"/>
+        <activity
+            android:name=".FavouriteBooksActivity"
+            android:exported="false"
+            android:label="@string/favourites"
+            android:parentActivityName=".AllBooksActivity"/>
+        <activity
+            android:name=".CurrentlyReadingBooksActivity"
+            android:exported="false"
+            android:label="@string/currently_reading"
+            android:parentActivityName=".AllBooksActivity"/>
+        <activity
+            android:name=".WishListActivity"
+            android:exported="false"
+            android:label="@string/wishlist"
+            android:parentActivityName=".AllBooksActivity"/>
+        <activity
+            android:name=".AlreadyReadBooksActivity"
+            android:exported="false"
+            android:label="@string/already_read"
+            android:parentActivityName=".AllBooksActivity"/>
+        <activity
+            android:name=".BookActivity"
+            android:exported="false"
+            android:label="@string/book_details"
+            android:parentActivityName=".AllBooksActivity"/>
+        <activity
+            android:name=".AllBooksActivity"
+            android:exported="false"
+            android:label="@string/all_books"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
